@@ -1,0 +1,14 @@
+REMARK  hydrogens added, charges assigned, torsions detected
+ROOT
+HETATM    1  C1  UNL     0      -0.012   1.207   0.000  -0.001 C
+HETATM    2  O1  UNL     0       1.202   1.879   0.000  -0.500 OA
+HETATM    3  N1  UNL     0      -1.202   1.879   0.000  -0.300 NA
+HETATM    4  C2  UNL     0      -0.012  -0.207   0.000  -0.001 C
+HETATM    5  O2  UNL     0       1.202  -0.879   0.000  -0.500 OA
+HETATM    6  N2  UNL     0      -1.202  -0.879   0.000  -0.300 NA
+HETATM    7  H1  UNL     0       1.975   1.475   0.000   0.300 HD
+HETATM    8  H2  UNL     0      -1.975   1.475   0.000   0.300 HD
+HETATM    9  H3  UNL     0       1.975  -1.275   0.000   0.300 HD
+HETATM   10  H4  UNL     0      -1.975  -1.275   0.000   0.300 HD
+ENDROOT
+TORSDOF 0

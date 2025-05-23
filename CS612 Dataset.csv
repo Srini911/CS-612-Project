@@ -1,0 +1,51 @@
+Mutation,File,Substitution,Binding_Affinity,RMSD,MutationResidue,Orig_AA,Mut_AA,Hydropathy_Change,Is_Charged_Change,AA_Change_Type_polar?hydro,AA_Change_Type_polar?polar,MinDistance(Å),BindingAtMutationSite,Reason for Selection,ML Relevance
+HBB_E6V,HBB_E6V_cleaned_docked.pdbqt,H ? V,-3.762,8.681,6,H,V,7.4,1,TRUE,FALSE,6.02,No,Sickle cell mutation; adds hydrophobic patch to surface,Core mutation; ML anchor example for positive class (expected binding)
+HBB_E7K,HBB_E7K_cleaned_docked.pdbqt,H ? K,-3.749,3.85,7,H,K,-0.7,0,FALSE,TRUE,17.38,No,Charge flip near E6V; tests neighborhood surface charge shift,Important for learning localized electrostatic changes
+HBB_V23E,HBB_V23E_cleaned_docked.pdbqt,H ? E,-3.759,8.823,23,H,E,-0.3,1,FALSE,TRUE,12.25,No,Hydrophobic to charged; tests polarity reversal,Useful contrast to E6V; helps ML learn non-binding cases
+HBB_P30A,HBB_P30A_cleaned_docked.pdbqt,H ? A,-3.778,5.276,30,H,A,5,1,TRUE,FALSE,3.46,Yes,Removes rigid kink in helix,Tests effect of increased local flexibility on binding
+HBB_F41S,HBB_F41S_cleaned_docked.pdbqt,H ? S,-3.758,17.098,41,H,S,2.4,1,FALSE,TRUE,15.12,No,Large hydrophobic to small polar; surface exposure,Tests polarity and volume change on drug accessibility
+HBB_H63Y,HBB_H63Y_cleaned_docked.pdbqt,H ? Y,-3.768,5.117,63,H,Y,1.9,1,FALSE,TRUE,12.12,No,Aromatic to polar aromatic,Minimal change; useful for neutral examples
+HBB_D79G,HBB_D79G_cleaned_docked.pdbqt,H ? G,-3.732,5.101,79,H,G,2.8,1,FALSE,TRUE,3.24,Yes,Charge removal and backbone flexibility,Important for learning how flexibility impacts binding
+HBB_L88P,HBB_L88P_cleaned_docked.pdbqt,H ? P,-3.733,4.81,88,H,P,1.6,1,FALSE,TRUE,7.66,No,Breaks helix and introduces conformational kink,Tests how major structural shift affects binding sites
+HBB_G25D,HBB_G25D_cleaned_docked.pdbqt,H ? D,-3.769,18.391,25,H,D,-0.3,1,FALSE,TRUE,2.21,Yes,Neutral to acidic; adds surface charge,Adds to electrostatic pattern learning in ML
+HBB_K17N,HBB_K17N_cleaned_docked.pdbqt,H ? N,-3.724,4.841,17,H,N,-0.3,1,FALSE,TRUE,9.92,No,Basic to polar; moderate side-chain change,Neutral example to help ML model avoid overfitting to extreme cases
+HBB_T15A,HBB_T15A_cleaned_docked.pdbqt,H ? A,-3.769,17.767,15,H,A,5,1,TRUE,FALSE,14,No,Loss of OH group; minor polarity shift,Conservative mutation control
+HBB_A40T,HBB_A40T_cleaned_docked.pdbqt,H ? T,-3.779,4.977,40,H,T,2.5,1,FALSE,TRUE,13.37,No,Adds polarity; alters surface hydration,Subtle shift; checks sensitivity to OH addition
+HBB_G29R,HBB_G29R_cleaned_docked.pdbqt,H ? R,-3.764,5.752,29,H,R,-1.3,0,FALSE,TRUE,3.47,Yes,"Small to charged, bulky substitution",Tests spatial constraints vs charge-attraction in binding
+HBB_L68V,HBB_L68V_cleaned_docked.pdbqt,H ? V,-3.773,8.823,68,H,V,7.4,1,TRUE,FALSE,3.56,Yes,Hydrophobic to smaller hydrophobic,Useful conservative control for ML training
+HBB_H92Q,HBB_H92Q_cleaned_docked.pdbqt,H ? Q,-3.761,7.791,92,H,Q,-0.3,1,FALSE,TRUE,9.71,No,Aromatic to polar uncharged,Tests shape preservation vs charge removal
+HBB_K90R,HBB_K90R_cleaned_docked.pdbqt,H ? R,-3.671,23.881,90,H,R,-1.3,0,FALSE,TRUE,5.26,No,Basic to basic; minimal effect,Good for ML model to learn 'same class' neutral effects
+HBB_A70D,HBB_A70D_cleaned_docked.pdbqt,H ? D,-3.726,5.376,70,H,D,-0.3,1,FALSE,TRUE,5.9,No,Neutral to negative charge; electrostatic impact,Tests how acidic residues affect local drug compatibility
+HBB_N108K,HBB_N108K_cleaned_docked.pdbqt,H ? K,-3.53,6.596,108,H,K,-0.7,0,FALSE,TRUE,2.68,Yes,Polar to basic; increases positive surface,Good for electrostatic pattern learning
+HBB_L105P,HBB_L105P_cleaned_docked.pdbqt,H ? P,-3.592,4.402,105,H,P,1.6,1,FALSE,TRUE,4.09,Yes,Disrupts secondary structure,Sharp structural variation; good for negative class training
+HBB_Y145C,HBB_Y145C_cleaned_docked.pdbqt,H ? C,-3.765,5.337,145,H,C,5.7,1,TRUE,FALSE,7.4,No,Aromatic to reactive sulfur; disulfide-forming,Introduces rare sulfur-based reactivity; ML learns outliers
+HBB_A139T,HBB_A139T_cleaned_docked.pdbqt,H ? T,-3.662,5.302,139,H,T,2.5,1,FALSE,TRUE,2.15,Yes,Small to polar; alters water accessibility,Checks hydration effects near C-terminal
+HBB_G136E,HBB_G136E_cleaned_docked.pdbqt,H ? E,-3.764,4.355,136,H,E,-0.3,1,FALSE,TRUE,2.05,Yes,Tiny to negatively charged,Tests insertion of charge into neutral region
+HBB_S138F,HBB_S138F_cleaned_docked.pdbqt,H ? F,-3.961,6.139,138,H,F,6,1,TRUE,FALSE,2.62,Yes,Polar to aromatic bulky,Volume and hydrophobicity gain; good for surface binding shifts
+HBB_G100S,HBB_G100S_cleaned_docked.pdbqt,H ? S,-3.779,3.345,100,H,S,2.4,1,FALSE,TRUE,5.49,No,Adds OH group to small residue,Surface-exposed variant; checks polarity tuning
+HBB_V98M,HBB_V98M_cleaned_docked.pdbqt,H ? M,-3.749,5.077,98,H,M,5.1,1,TRUE,FALSE,10.66,No,Hydrophobic to bulkier hydrophobic,Size change with minimal polarity change
+HBB_T87A,HBB_T87A_cleaned_docked.pdbqt,H ? A,-3.733,8.823,87,H,A,5,1,TRUE,FALSE,8.66,No,Loses polarity near functional site,Tests proximity effect near drug interface
+HBB_R104H,HBB_R104H_cleaned_docked.pdbqt,H ? H,-3.657,3.923,104,H,H,0,0,FALSE,TRUE,1.97,Yes,Basic to aromatic ring,Checks shift from full to partial charge
+HBB_F46L,HBB_F46L_cleaned_docked.pdbqt,H ? L,-3.693,6.698,46,H,L,7,1,TRUE,FALSE,10.03,No,Bulky aromatic to aliphatic,Good for hydrophobic reshaping at core
+HBB_H58D,HBB_H58D_cleaned_docked.pdbqt,H ? D,-3.779,4.657,58,H,D,-0.3,1,FALSE,TRUE,5.59,No,Basic to acidic; sharp polarity flip,Electrostatic reversal effect on surface
+HBB_D64N,HBB_D64N_cleaned_docked.pdbqt,H ? N,-3.79,5.198,64,H,N,-0.3,1,FALSE,TRUE,8.75,No,Acidic to polar neutral,Minor effect; helps balance dataset
+HBB_G76R,HBB_G76R_cleaned_docked.pdbqt,H ? R,-3.713,23.923,76,H,R,-1.3,0,FALSE,TRUE,2.38,Yes,Neutral to strongly basic,Bulky charged group at flexible loop
+HBB_T134P,HBB_T134P_cleaned_docked.pdbqt,H ? P,-3.751,24.108,134,H,P,1.6,1,FALSE,TRUE,4.21,Yes,Rigidifies segment with kink,Tests loop disruption effect
+HBB_L110M,HBB_L110M_cleaned_docked.pdbqt,H ? M,-3.776,4.009,110,H,M,5.1,1,TRUE,FALSE,5.91,No,Similar hydrophobic types,Good conservative mutation
+HBB_V114A,HBB_V114A_cleaned_docked.pdbqt,H ? A,-3.762,5.37,114,H,A,5,1,TRUE,FALSE,9.76,No,Smaller hydrophobic,Tests compacting effect
+HBB_Y145S,HBB_Y145S_cleaned_docked.pdbqt,H ? S,-3.76,5.055,145,H,S,2.4,1,FALSE,TRUE,8.54,No,Aromatic to polar small,Simplifies surface at tail
+HBB_G143R,HBB_G143R_cleaned_docked.pdbqt,H ? R,-3.752,11.039,143,H,R,-1.3,0,FALSE,TRUE,6.64,No,Tiny to basic large,Extreme volume & charge jump
+HBB_K132N,HBB_K132N_cleaned_docked.pdbqt,H ? N,-3.747,5.651,132,H,N,-0.3,1,FALSE,TRUE,6.97,No,Basic to polar,Side-chain change but charge loss
+HBB_A136P,HBB_A136P_cleaned_docked.pdbqt,H ? P,-3.749,3.798,136,H,P,1.6,1,FALSE,TRUE,4.09,Yes,Rigidifies the segment,Tests mobility loss
+HBB_E127K,HBB_E127K_cleaned_docked.pdbqt,H ? K,-3.766,5.821,127,H,K,-0.7,0,FALSE,TRUE,9.79,No,Strong negative to strong positive,Important charge inversion
+HBB_S126L,HBB_S126L_cleaned_docked.pdbqt,H ? L,-3.752,5.739,126,H,L,7,1,TRUE,FALSE,14.49,No,Polar to large hydrophobic,Surface shift from water-attracting to repelling
+HBB_V121F,HBB_V121F_cleaned_docked.pdbqt,H ? F,-3.772,4.38,121,H,F,6,1,TRUE,FALSE,18.84,No,Hydrophobic to aromatic,Tests aromatic ring inclusion
+HBB_T120A,HBB_T120A_cleaned_docked.pdbqt,H ? A,-3.768,5.247,120,H,A,5,1,TRUE,FALSE,14.97,No,Removes OH; minimal effect,Soft control
+HBB_H117Q,HBB_H117Q_cleaned_docked.pdbqt,H ? Q,-3.685,5.29,117,H,Q,-0.3,1,FALSE,TRUE,8.65,No,Aromatic to polar amide,Tests ring loss
+HBB_R116C,HBB_R116C_cleaned_docked.pdbqt,H ? C,-3.743,7.285,116,H,C,5.7,1,TRUE,FALSE,11.24,No,Charged to sulfur-containing,Adds chemical reactivity
+HBB_A115T,HBB_A115T_cleaned_docked.pdbqt,H ? T,-3.771,5.932,115,H,T,2.5,1,FALSE,TRUE,8.53,No,Small to OH-containing,Tests gain of H-bond donor
+HBB_G112S,HBB_G112S_cleaned_docked.pdbqt,H ? S,-3.711,10.919,112,H,S,2.4,1,FALSE,TRUE,6.68,No,Tiny to small polar,Surface polarity gain
+HBB_S111F,HBB_S111F_cleaned_docked.pdbqt,H ? F,-3.718,6.932,111,H,F,6,1,TRUE,FALSE,3.95,Yes,Polar to aromatic bulky,Hydrophobic clash test
+HBB_P109L,HBB_P109L_cleaned_docked.pdbqt,H ? L,-3.717,4.222,109,H,L,7,1,TRUE,FALSE,4.85,Yes,Rigid to flexible,Helix breaker removal
+HBB_A108V,HBB_A108V_cleaned_docked.pdbqt,H ? V,-3.266,3.876,108,H,V,7.4,1,TRUE,FALSE,5.94,No,Hydrophobic conservative,Very mild mutation
+HBB_T107I,HBB_T107I_cleaned_docked.pdbqt,H ? I,-3.274,7.798,107,H,I,7.7,1,TRUE,FALSE,3.15,Yes,Polar to bulky hydrophobic,Tests drastic size & class change
